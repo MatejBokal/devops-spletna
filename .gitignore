@@ -1,15 +1,15 @@
 # ─────────────────────────────
 # DEPENDENCIES
 # ─────────────────────────────
-frontend/node_modules/
-frontend/.pnpm/
-frontend/.npm/
-frontend/.yarn/
+code/taprav-fri/frontend/node_modules/
+code/taprav-fri/frontend/.pnpm/
+code/taprav-fri/frontend/.npm/
+code/taprav-fri/frontend/.yarn/
 
 # ─────────────────────────────
 # BUILD & OUTPUT FOLDERS
 # ─────────────────────────────
-frontend/.next/
-frontend/out/
-frontend/dist/
-frontend/build/
+code/taprav-fri/frontend/.next/
+code/taprav-fri/frontend/out/
+code/taprav-fri/frontend/dist/
+code/taprav-fri/frontend/build/
