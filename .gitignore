@@ -1,0 +1,15 @@
+# ─────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────
+frontend/node_modules/
+frontend/.pnpm/
+frontend/.npm/
+frontend/.yarn/
+
+# ─────────────────────────────
+# BUILD & OUTPUT FOLDERS
+# ─────────────────────────────
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/build/
