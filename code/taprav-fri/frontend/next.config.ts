@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['test-matejbokal.si'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/taprav-fri/api/:path*',
+        destination: 'http://localhost:80/taprav-fri/api/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
