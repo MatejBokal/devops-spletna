@@ -43,7 +43,7 @@ export default function AdminEventReservationsPage() {
     }
 
     fetch(
-      `http://localhost/taprav-fri/api/admin/event_reservations.php?slug=${encodeURIComponent(
+      `/taprav-fri/api/admin/event_reservations.php?slug=${encodeURIComponent(
         slug
       )}`,
       {

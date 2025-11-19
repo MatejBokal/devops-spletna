@@ -35,7 +35,7 @@ export default function EventDetailPage() {
       return;
     }
 
-    fetch(`http://localhost/taprav-fri/api/event_detail.php?slug=${slug}`, {
+    fetch(`/taprav-fri/api/event_detail.php?slug=${slug}`, {
       credentials: 'include',
     })
       .then(async (res) => {
@@ -78,7 +78,7 @@ export default function EventDetailPage() {
         <div className="w-full md:w-1/2">
           <div className="relative w-full h-64 md:h-[400px]">
             <Image
-              src={`http://localhost/taprav-fri/api/${event.image_path}`}
+              src={`/taprav-fri/api/${event.image_path}`}
               alt={event.title}
               fill
               className="object-cover rounded-lg shadow-md"

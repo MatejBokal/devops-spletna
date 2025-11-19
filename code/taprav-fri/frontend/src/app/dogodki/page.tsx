@@ -23,7 +23,7 @@ export default function DogodkiPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost/taprav-fri/api/events_list.php', {
+    fetch('/taprav-fri/api/events_list.php', {
       credentials: 'include',
     })
       .then(async (res) => {
@@ -73,7 +73,7 @@ export default function DogodkiPage() {
               title={evt.title}
               date={evt.event_date}
               description={evt.description}
-              img={`http://localhost/taprav-fri/api/${evt.image_path}`}
+              img={`/taprav-fri/api/${evt.image_path}`}
             />
           ))}
         </div>

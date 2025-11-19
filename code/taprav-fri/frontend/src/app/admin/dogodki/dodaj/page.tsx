@@ -87,7 +87,7 @@ export default function AddEventPage() {
 
     try {
       const res = await fetch(
-        "http://localhost/taprav-fri/api/admin/event_create.php",
+        "/taprav-fri/api/admin/event_create.php",
         {
           method: "POST",
           credentials: "include",

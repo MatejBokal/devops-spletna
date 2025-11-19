@@ -23,7 +23,7 @@ export default function MojeRezervacijePage() {
   const [newQuantity, setNewQuantity] = useState<number>(1);
 
   useEffect(() => {
-    fetch("http://localhost/taprav-fri/api/my_reservations.php", {
+    fetch("/taprav-fri/api/my_reservations.php", {
       credentials: "include",
     })
       .then(async (res) => {
@@ -63,7 +63,7 @@ export default function MojeRezervacijePage() {
   const saveQuantity = async (reservation_id: number, event_id: number) => {
     try {
       const res = await fetch(
-        "http://localhost/taprav-fri/api/reservation_update.php",
+        "/taprav-fri/api/reservation_update.php",
         {
           method: "POST",
           credentials: "include",
@@ -94,7 +94,7 @@ export default function MojeRezervacijePage() {
     if (!confirm("Želite res izbrisati to rezervacijo?")) return;
     try {
       const res = await fetch(
-        "http://localhost/taprav-fri/api/reservation_delete.php",
+        "/taprav-fri/api/reservation_delete.php",
         {
           method: "POST",
           credentials: "include",

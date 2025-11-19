@@ -59,7 +59,7 @@ export default function EditEventPage() {
     setLoading(true);
     setError(null);
 
-    fetch(`http://localhost/taprav-fri/api/admin/event_details.php?slug=${slug}`, {
+    fetch(`/taprav-fri/api/admin/event_details.php?slug=${slug}`, {
       credentials: "include",
     })
       .then(async (res) => {
@@ -150,7 +150,7 @@ export default function EditEventPage() {
 
     try {
       const res = await fetch(
-        "http://localhost/taprav-fri/api/admin/event_update.php",
+        "/taprav-fri/api/admin/event_update.php",
         {
           method: "POST",
           credentials: "include",

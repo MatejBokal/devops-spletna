@@ -42,7 +42,7 @@ export default function RegisterTickets({ eventId }: RegisterTicketsProps) {
 
   const completeReservation = async () => {
     try {
-      const res = await fetch('http://localhost/taprav-fri/api/make_reservation.php', {
+      const res = await fetch('/taprav-fri/api/make_reservation.php', {
         method: 'POST',
         credentials: 'include',
         headers: {

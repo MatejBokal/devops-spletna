@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     if (typeof window === "undefined") return;
 
     try {
-      const res = await fetch("http://localhost/taprav-fri/api/logout.php", {
+      const res = await fetch("/taprav-fri/api/logout.php", {
         method: "POST",
         credentials: "include",
       });

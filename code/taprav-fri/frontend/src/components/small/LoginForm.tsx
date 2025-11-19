@@ -28,7 +28,7 @@ export default function LoginForm({
     }
 
     try {
-        const res = await fetch("http://localhost/taprav-fri/api/login.php", {
+        const res = await fetch("/taprav-fri/api/login.php", {
         method: "POST",
         credentials: "include",
         headers: {

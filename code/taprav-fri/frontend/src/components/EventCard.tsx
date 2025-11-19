@@ -20,7 +20,7 @@ export default function EventCard({
   img,
 }: EventCardProps) {
   const handleMouseEnter = useCallback(() => {
-    fetch(`http://localhost/taprav-fri/api/event_detail.php?slug=${slug}`, {
+    fetch(`/taprav-fri/api/event_detail.php?slug=${slug}`, {
       credentials: 'include',
     }).catch(() => {
     });

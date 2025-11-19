@@ -4,7 +4,7 @@
 async function getEventSlugs() {
   try {
     // Call your public events API endpoint (which returns JSON { success, events: [ { slug, … }, … ] })
-    const res = await fetch("http://localhost/taprav-fri/api/events_list.php");
+    const res = await fetch("/taprav-fri/api/events_list.php");
     const json = await res.json();
     if (!json.success || !Array.isArray(json.events)) return [];
     // Map each event to its relative path

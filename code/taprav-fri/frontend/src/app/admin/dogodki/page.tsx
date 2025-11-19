@@ -21,7 +21,7 @@ export default function AdminDogodkiPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost/taprav-fri/api/admin/events_summary.php", {
+    fetch("/taprav-fri/api/admin/events_summary.php", {
       credentials: "include",
     })
       .then(async (res) => {
@@ -54,7 +54,7 @@ export default function AdminDogodkiPage() {
     if (!confirm("Želite res izbrisati ta dogodek?")) return;
 
     try {
-      const res = await fetch("http://localhost/taprav-fri/api/admin/event_delete.php", {
+      const res = await fetch("/taprav-fri/api/admin/event_delete.php", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

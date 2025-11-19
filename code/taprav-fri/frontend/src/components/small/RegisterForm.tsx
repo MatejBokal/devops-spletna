@@ -55,7 +55,7 @@ export default function RegisterForm({
     }
 
     try {
-      const res = await fetch("http://localhost/taprav-fri/api/register.php", {
+      const res = await fetch("/taprav-fri/api/register.php", {
         method: "POST",
         credentials: "include",
         headers: {
