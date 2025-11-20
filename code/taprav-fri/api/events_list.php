@@ -4,11 +4,17 @@ header('Content-Type: application/json; charset=UTF-8');
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/functions.php';
 
-
 $upcomingOnly = isset($_GET['upcoming']) && $_GET['upcoming'] === '1';
+$cacheKey = 'events_list:' . ($upcomingOnly ? 'upcoming' : 'all');
+
+$cached = $redis->get($cacheKey);
+if ($cached !== false) {
+    echo $cached;
+    exit;
+}
 
 $sql = "
-    SELECT 
+    SELECT
       e.id,
       e.slug,
       e.title,
@@ -32,8 +38,11 @@ foreach ($all as &$row) {
 }
 unset($row);
 
-echo json_encode([
+$response = json_encode([
     'success' => true,
     'events'  => $all
 ]);
+
+$redis->setex($cacheKey, 300, $response);
+echo $response;
 exit;
