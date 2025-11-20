@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'taprav-fri');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'skrito123');
 define('DB_CHARSET', 'utf8mb4');
 
 $options = [
