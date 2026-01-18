@@ -1,9 +1,15 @@
 import LogoButton from "@/components/small/LogoButton";
 import InfoButton from "./small/InfoButton";
 
+// real color
+// const bg_drive = "bg-[#FFA178]"
+
+// test update for docker and k8s testing:
+const bg_drive = "bg-black"
+
 const logoButtons = [
   { href: "/zibert",       label: "Žibert",  bg: "bg-[#FFE76E]", src: "/slike/logo-zibert.png" },
-  { href: "/drive-in",     label: "Drive-in",bg: "bg-[#FFA178]", src: "/slike/logo-drive-in.png" },
+  { href: "/drive-in",     label: "Drive-in",bg: bg_drive, src: "/slike/logo-drive-in.png" },
   { href: "/rooms",        label: "Rooms",   bg: "bg-[#D8BDA7]", src: "/slike/logo-rooms.png" },
   { href: "/dogodki",      label: "Dogodki",bg:"bg-[#FFB6B6]", src: "/slike/logo-dogodki.png" },
   { href: "https://wolt.com/sl/svn/ljubljana/restaurant/park-zibert", 
